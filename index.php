@@ -9,27 +9,39 @@
 
 <body>
 
-<!-- Form for adding the particular tasks -->
+	<!-- Form for adding the particular tasks -->
 
-<div class="container">
-	<form>
-	  <div class="form-group">
-	    <label for="exampleInputEmail1">Add task</label>
-	    <input type="text" class="form-control" id="list-item-input" placeholder="Enter email">
-	    <small id="emailHelp" class="form-text text-muted">Stay organized!</small>
+	<div class="container">
+		<div class="row">
+			<div class="col md-6 my-4">
+				<form>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Add task</label>
+						<input type="text" class="form-control" id="list-item-input" placeholder="Enter email">
+						<small id="emailHelp" class="form-text text-muted">Stay organized!</small>
+					</div>
+					<jsbutton class="btn btn-success" id="addButton">Add</jsbutton>
+					<button type="submit" class="btn btn-primary">Save</button>
+				</form>
+			</div>
 		</div>
-	  <jsbutton class="btn btn-success" id="addButton">Add</jsbutton>
-	  <button type="submit" class="btn btn-primary">Save</button>
-	</form>
-</div>
+		<!-- The task list -->
 
-<!-- The task list -->
+		<div class="row">
+			<div class="col md-6">
+				<ul class="list-group" id="task-list">
+					<li class="list-group-item">Example item 
+ 					<button type="button" class="close" aria-label="Close">
+  					<span aria-hidden="true">&times;</span>
+					</button>
+					</li>
 
-<ul class="list-group" id="task-list">
-  <li class="list-group-item">Cras justo odio</li>
-</ul>
-	
-	
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
