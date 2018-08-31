@@ -5,7 +5,8 @@ Allows the user to add items to the list and then save the whole list to the dat
 
 Technologies used:
 - JavaScript
-- PHP
+    - manipulating DOM, adding/removing elements, adding event listeners, manipulating the event object
+- PHPs
 - MySQL
 - Bootstrap
 
