@@ -1,4 +1,5 @@
-<?php require 'db.php'; ?>
+<?php require 'functions.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +19,7 @@
 				<form>
 					<div class="form-group">
 						<label for="exampleInputEmail1">Add task</label>
-						<input type="text" class="form-control" id="list-item-input" placeholder="Enter email">
+						<input type="text" class="form-control" id="list-item-input" placeholder="Enter task...">
 						<small id="emailHelp" class="form-text text-muted">Stay organized!</small>
 					</div>
 					<jsbutton class="btn btn-success" id="addButton">Add</jsbutton>
@@ -30,13 +31,18 @@
 
 		<div class="row">
 			<div class="col md-6">
+				<p class="h4">Your saved tasks: </p>
 				<ul class="list-group" id="task-list">
-					<li class="list-group-item">Example item 
+
+					<?php if ($tasks = get_tasks()) : ?>
+					<?php foreach ($tasks as $task) : ?>
+					<li class="list-group-item"><?php echo $task; ?>
  					<button type="button" class="close" aria-label="Close">
   					<span aria-hidden="true">&times;</span>
 					</button>
 					</li>
-
+					<?php endforeach; ?>
+					<?php endif; ?>
 				</ul>
 			</div>
 		</div>
