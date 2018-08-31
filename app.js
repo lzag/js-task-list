@@ -6,6 +6,17 @@ addButton.addEventListener('click', function() {
 	addItem(listItem.value);
 }, false);
 
+let taskList = document.getElementById('task-list');
+
+console.log(taskList);
+
+taskList.addEventListener('click', removeItem
+						 );
+
+function removeItem(e) {
+ 	console.log(e.target.parentElement.parentElement.remove())
+};
+
 function addItem(task) {
 	let taskItem = task;
 	
@@ -27,9 +38,7 @@ function addItem(task) {
 	node.className = "list-group-item";
 	node.appendChild(textnode);
 	node.appendChild(button);
-	
-	
-	
+
 	document.getElementById("task-list").appendChild(node); 
 };
 
